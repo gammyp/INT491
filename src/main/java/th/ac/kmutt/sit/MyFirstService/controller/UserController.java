@@ -32,12 +32,15 @@ public class UserController {
         return new User(5, "NewUser");
     }
 
+    //Return all user's object in an Arraylist
     @GetMapping("/users")
     public ArrayList<User> getUsers() {
         ArrayList user = new ArrayList();
-        for (int i = 0; i < 5; i++) {
-            user.add(new User(i+1, "Test User"));
-        }
+        user.add(new User(1, "Phornlert"));
+        user.add(new User(2, "Allen"));
+        user.add(new User(3, "Panya"));
+        user.add(new User(4, "Paapan"));
+        user.add(new User(5, "NewUser"));
         return user;
     }
 }
