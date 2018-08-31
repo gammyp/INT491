@@ -7,6 +7,11 @@ import java.util.ArrayList;
 @RestController
 public class UserController {
 
+    @GetMapping("/")
+    public String testAPI() {
+        return "Your API is working!!";
+    }
+
     @GetMapping("/user/1")
     public User getUserId1() {
         return new User(1, "Phornlert");
